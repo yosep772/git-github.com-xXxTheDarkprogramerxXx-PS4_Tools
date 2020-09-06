@@ -1,0 +1,288 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{095271BF-9F85-43D0-BF8E-782B18EAED6F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PS4_Tools</RootNamespace>
+    <AssemblyName>PS4_Tools</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Mono|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Mono\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'UNITY_PS4|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\UNITY_PS4\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'PS4 Unity|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\PS4 Unity\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PS4_UNITY</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Android Mono|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Android Mono\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;Android_Mono</DefineConstants>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BigInteger, Version=1.0.7.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\BigInteger.1.0.7\lib\net20\BigInteger.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DiscUtils, Version=0.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Downloads\DiscUtils\sourceCode\discutils\src\bin\Debug\DiscUtils.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetZip, Version=1.12.0.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.12.0\lib\net20\DotNetZip.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DspAdpcm">
+      <HintPath>..\..\..\..\..\Downloads\VGAudio-master\DspAdpcm.dll</HintPath>
+    </Reference>
+    <Reference Include="GameArchives, Version=0.1.138.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Downloads\LibOrbisPkg-0.1.138\GameArchives.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.8.10.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.8.10\lib\Net20\HtmlAgilityPack.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.0.86.0\lib\20\ICSharpCode.SharpZipLib.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="LibOrbisPkg, Version=0.1.138.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Downloads\LibOrbisPkg-0.1.138\LibOrbisPkg.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net35\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PARAM.SFO">
+      <HintPath>..\..\..\..\GitHub\PS3Tools\PARAM.SFO Editor\PARAM.SFO\bin\Debug\PARAM.SFO.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.0\lib\netstandard1.1\System.Buffers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.1\lib\netstandard1.1\System.Memory.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\portable-net45+win8+wp8+wpa81\System.Numerics.Vectors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard1.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Runtime.InteropServices.RuntimeInformation, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.InteropServices.RuntimeInformation.4.3.0\lib\net45\System.Runtime.InteropServices.RuntimeInformation.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UnityEditor">
+      <HintPath>..\..\..\..\..\..\..\Program Files\Unity\Editor\Data\Managed\UnityEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\Program Files\Unity\Editor\Data\Managed\UnityEngine.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Files\PUP\BlockInfo.cs" />
+    <Compile Include="Files\PUP\Entry.cs" />
+    <Compile Include="Files\PUP\PUP.cs" />
+    <Compile Include="Files\SELF\llvm.cs" />
+    <Compile Include="Files\SELF\Self.cs" />
+    <Compile Include="LibOrbis\GP4\Gp4Project.cs" />
+    <Compile Include="LibOrbis\PFS\FlatPathTable.cs" />
+    <Compile Include="LibOrbis\PFS\FSTree.cs" />
+    <Compile Include="LibOrbis\PFS\PfsBuilder.cs" />
+    <Compile Include="LibOrbis\PFS\PFSCWriter.cs" />
+    <Compile Include="LibOrbis\PFS\PfsHeader.cs" />
+    <Compile Include="LibOrbis\PFS\PfsProperties.cs" />
+    <Compile Include="LibOrbis\PKG\LicenseInfo.cs" />
+    <Compile Include="LibOrbis\PKG\PkgWriter.cs" />
+    <Compile Include="LibOrbis\PKG\PkgBuilder.cs" />
+    <Compile Include="LibOrbis\PKG\PkgProperties.cs" />
+    <Compile Include="LibOrbis\RIF\LicenseDat.cs" />
+    <Compile Include="LibOrbis\SFO\ParamSfo.cs" />
+    <Compile Include="LibOrbis\Util\CancellationToken.cs" />
+    <Compile Include="LibOrbis\Util\Crypto.cs" />
+    <Compile Include="LibOrbis\Util\Enums.cs" />
+    <Compile Include="LibOrbis\PKG\Entry.cs" />
+    <Compile Include="LibOrbis\PKG\Pkg.cs" />
+    <Compile Include="LibOrbis\PKG\PkgReader.cs" />
+    <Compile Include="LibOrbis\PlayGo\ChunkDat.cs" />
+    <Compile Include="LibOrbis\PlayGo\Manifest.cs" />
+    <Compile Include="LibOrbis\Util\Extensions.cs" />
+    <Compile Include="LibOrbis\Util\Keys.cs" />
+    <Compile Include="LibOrbis\Util\MemoryMappedFiles\Enums.cs" />
+    <Compile Include="LibOrbis\Util\MemoryMappedFiles\MemoryMappedFile.cs" />
+    <Compile Include="LibOrbis\Util\MemoryMappedFiles\MemoryMappedFileSecurity.cs" />
+    <Compile Include="LibOrbis\Util\MemoryMappedFiles\MemoryMappedView.cs" />
+    <Compile Include="LibOrbis\Util\MemoryMappedFiles\MemoryMappedViewAccessor.cs" />
+    <Compile Include="LibOrbis\Util\MemoryMappedFiles\MemoryMappedViewStream.cs" />
+    <Compile Include="LibOrbis\Util\MemoryMappedFiles\SafeMemoryMappedFileHandler.cs" />
+    <Compile Include="LibOrbis\Util\MemoryMappedFiles\UnmanagedMemoryAccessor.cs" />
+    <Compile Include="LibOrbis\Util\MersenneTwister.cs" />
+    <Compile Include="LibOrbis\Util\Net4Extensions.cs" />
+    <Compile Include="LibOrbis\Util\Net4Fix.cs" />
+    <Compile Include="LibOrbis\Util\OperationCanceledException.cs" />
+    <Compile Include="LibOrbis\Util\ParallelLoopState.cs" />
+    <Compile Include="LibOrbis\Util\ParallelOptions.cs" />
+    <Compile Include="LibOrbis\Util\ReaderBase.cs" />
+    <Compile Include="LibOrbis\Util\SpinWait.cs" />
+    <Compile Include="LibOrbis\Util\StreamExtensions.cs" />
+    <Compile Include="LibOrbis\Util\SubStream.cs" />
+    <Compile Include="LibOrbis\Util\Volatile.cs" />
+    <Compile Include="Main.cs" />
+    <Compile Include="Media\Atrac9\Atrac9Config.cs" />
+    <Compile Include="Media\Atrac9\Atrac9Decoder.cs" />
+    <Compile Include="Media\Atrac9\Atrac9Reader.cs" />
+    <Compile Include="Media\Atrac9\Atrac9Rng.cs" />
+    <Compile Include="Media\Atrac9\Atract9FormatBuilder.cs" />
+    <Compile Include="Media\Atrac9\BandExtension.cs" />
+    <Compile Include="Media\Atrac9\BitAllocation.cs" />
+    <Compile Include="Media\Atrac9\Block.cs" />
+    <Compile Include="Media\Atrac9\Channel.cs" />
+    <Compile Include="Media\Atrac9\ChannelConfig.cs" />
+    <Compile Include="Media\Atrac9\Frame.cs" />
+    <Compile Include="Media\Atrac9\HuffmanCodebook.cs" />
+    <Compile Include="Media\Atrac9\HuffmanCodebooks.cs" />
+    <Compile Include="Media\Atrac9\Quantization.cs" />
+    <Compile Include="Media\Atrac9\ScaleFactors.cs" />
+    <Compile Include="Media\Atrac9\Stereo.cs" />
+    <Compile Include="Media\Atrac9\Tables.cs" />
+    <Compile Include="Media\Atrac9\Unpack.cs" />
+    <Compile Include="Media\Atrac9\Utilities\Bit.cs" />
+    <Compile Include="Media\Atrac9\Utilities\BitReader.cs" />
+    <Compile Include="Media\Atrac9\Utilities\Helpers.cs" />
+    <Compile Include="Media\Atrac9\Utilities\Mdct.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Structs.cs" />
+    <Compile Include="TROPHY\Redo.cs" />
+    <Compile Include="TROPHY\TROPCONF.cs" />
+    <Compile Include="TROPHY\TROPTRNS.cs" />
+    <Compile Include="TROPHY\TROPUSR.cs" />
+    <Compile Include="Util\DDS\BC5Unorm.cs" />
+    <Compile Include="Util\DDS\BlockWindow.cs" />
+    <Compile Include="Util\DDS\cDDS.cs" />
+    <Compile Include="Util\DDS\DdsFile.cs" />
+    <Compile Include="Util\DDS\DDSImage.cs" />
+    <Compile Include="Util\OffsetStream.cs" />
+    <Compile Include="Util\PS4PkgUtil.cs" />
+    <Compile Include="Util\SCEUtil.cs" />
+    <Compile Include="Util\Squish\Squish.cs" />
+    <Compile Include="Util\Squish\SquishFlags.cs" />
+    <Compile Include="Util\System.cs" />
+    <Compile Include="Util\Utils.cs" />
+    <Compile Include="Util\WriterBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Resources\at9toolDefaultSettingFile.ini" />
+    <None Include="Resources\at9toolDefaultSettingFile.ini.file" />
+    <None Include="Resources\ext.zip" />
+    <None Include="Resources\param.sfo" />
+    <None Include="Resources\PS2.zip" />
+    <None Include="Resources\PS2Classics.gp4" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\orbis-pub-cmd.exe" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="LibOrbisPkg.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
